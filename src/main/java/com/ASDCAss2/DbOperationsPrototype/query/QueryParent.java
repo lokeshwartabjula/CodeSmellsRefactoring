@@ -17,7 +17,12 @@ public abstract class QueryParent {
 	
 
 	
-	abstract void printQueryDetails();
+	void printQueryDetails() {
+		System.out.println("Query : "+this.query+
+				"Written By: "+this.writtenBy+
+				"Database Name: "+this.databaseName+
+				"Query Type: "+this.queryType);
+	};
 
 
 
