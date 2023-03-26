@@ -1,7 +1,7 @@
-- Project Info:
+Project Info:
     - This project is a functional java application that simulates basic SQL crud operations and also demonstrates various types of smells like Architecture smells, Design Smells and Implementation smells delibarately.
 
-- Architecture Smell:
+Architecture Smell:
     - Cyclic Dependency
         - Abstraction Type: Package
         - Package(Component) Location: com.ASDCAss2.DbOperationsPrototype and com.ASDCAss2.DbOperationsPrototype.util
@@ -9,7 +9,7 @@
         - Line Number / Smell Location: com.ASDCAss2.DbOperationsPrototype and com.ASDCAss2.DbOperationsPrototype.util
         - Explanation: The DbOperationsPrototypeApplication class from com.ASDCAss2.DbOperationsPrototype depends on FileUpdateInfo and Utilities Classes from com.ASDCAss2.DbOperationsPrototype.util component. Similarly Utilities class is dependent on Utilities Class from com.ASDCAss2.DbOperationsPrototype component. Abstractions should be acyclic with respect to dependencies, Otherwise, a change in an abstraction may result in a ripple effect across the entire design. Hence here the existence of Cyclic Dependency architecture smell is observed.
 
-- Design Smells:
+Design Smells:
     - Rebellious Hierarchy
         - Abstraction Type: Class
         - Class Location: com.ASDCAss2.DbOperationsPrototype.query
@@ -31,7 +31,7 @@
         - Line Number / Smell Location: Line 11 in QueryParent Class
         - Explanation: The QueryParent is an abstract parent class and the UpdateQueryChild is a child class of QueryParent. Usually, Child classes should inherit properties from parent classes and should depend on the parent class and not the other way round. But here the parent class, QueryParent is depending upon one of its child classes which is UpdateQueryChild. Hence the existence of Cyclic Hierarchy smell.
 
-- Implementation Smells:
+Implementation Smells:
     - Complex Method
         - Abstraction Type: Method
         - Class Location: com.ASDCAss2.DbOperationsPrototype
